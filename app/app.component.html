@@ -1,0 +1,101 @@
+<!-- Navbar-->
+
+<mat-toolbar color="primary" class="navbar">
+  <mat-icon>person</mat-icon>
+  <mat-icon>notifications_none</mat-icon>
+</mat-toolbar>
+
+<!-- Search Input -->
+
+<form class= "search-input" action="">
+  <mat-form-field>
+    <input placeholder="Search" type="text" matInput [matAutocomplete]="auto" [formControl]="myControl"/>
+    <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+        {{option}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>
+
+<!-- Contact List -->
+
+<mat-list>
+  <mat-list-item>
+    <mat-icon matListIcon>account_circle</mat-icon>
+    <h3 matLine>Círculo de crédito</h3>
+    <p matLine>Ale de los Santos</p>
+  </mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>
+      <mat-icon matListIcon>account_circle</mat-icon>
+      <h3 matLine>Capital Humano S.A de C.V</h3>
+      <p matLine>Rubén Morales Leyva</p>
+      <p matLine>Ricardo Viveros García</p>
+      <p matLine>Martha Radilla Rodríguez</p>
+  </mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>
+    <mat-icon matListIcon>account_circle</mat-icon>
+    <h3 matLine>Círculo contigo</h3>
+    <p matLine>Raúl Reyes Hernandez</p>
+  </mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>
+      <mat-icon matListIcon>account_circle</mat-icon>
+      <h3 matLine>D Staffing Personal S.A de C.V</h3>
+      <p matLine>Jorge Gasca Barrios</p>
+  </mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>
+      <mat-icon matListIcon>account_circle</mat-icon>
+      <h3 matLine>DPM Capital Humano</h3>
+      <p matLine>Rubén Morales Leyva</p>
+      <p matLine>Ricardo Viveros García</p>
+      <p matLine>Martha Radilla Rodríguez</p>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>
+        <mat-icon matListIcon>account_circle</mat-icon>
+        <h3 matLine>Diantres</h3>
+        <p matLine>Raúl Reyes Hernandez</p>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>
+      <mat-icon matListIcon>account_circle</mat-icon>
+      <h3 matLine>Erase una vez</h3>
+      <p matLine>Jorge Gasca Barrios</p>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>
+        <mat-icon matListIcon>account_circle</mat-icon>
+        <h3 matLine>Empoderamiento Humano</h3>
+        <p matLine>Rubén Morales Leyva</p>
+        <p matLine>Ricardo Viveros García</p>
+        <p matLine>Martha Radilla Rodríguez</p>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>
+        <mat-icon matListIcon>account_circle</mat-icon>
+        <h3 matLine>Esta vez S.A de C.V</h3>
+        <p matLine>Raúl Reyes Hernandez</p>
+    </mat-list-item>
+</mat-list>
+
+<!-- Footer -->
+
+<mat-toolbar color="primary" class="footer">
+  <mat-menu #appMenu="matMenu" xPosition="before" yPosition="below">
+    <button mat-menu-item>E</button>
+    <button mat-menu-item>A</button>
+    <button mat-menu-item>R</button>
+    <button mat-menu-item>C</button>
+  </mat-menu>
+
+
+  <button class="burger"
+    mat-button
+    [matMenuTriggerFor]="appMenu">
+    <mat-icon>view_agenda</mat-icon>
+  </button>
+</mat-toolbar>

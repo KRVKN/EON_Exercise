@@ -1,0 +1,30 @@
+mat-toolbar{
+    width: 100vw;
+}
+
+.navbar{
+    justify-content: space-between;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.footer{
+    justify-content: space-between;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+mat-grid-tile {
+    background-color: lightblue;
+}
+
+.search-input{
+    margin-top: 5em;
+    margin-left: 1em;
+}
